@@ -19,7 +19,7 @@ public class SpotifyApi {
 	
 	@BeforeTest
 	public void getToken() {
-		token = "Bearer BQAd184QCme2oMVn8wYvY8-0c4Yvg4XdncivFBIqnubew9te7NQGZSi1cmJhVgct5yp8GziFShm-5hlsO751yxvMfQPEIdTMxh4QjvsCyWPoe_mUMx8P28WP8BRvK8tm32nhmrZx9E3MiJjG0nMXdfWc4GyfR85bsos2-E0nvaK22lDfPZlb5BPct4w6t5RyFAQdN7OFRi702Ik4Ht-rQDN0sZTd39JBTbCKEBHnPUPZCVrYpHsTD97FzYIamkDgyJT6VktxVPnPT_hs9ton2YeNY5uNtoL8Qvbadv_tEy8HRSjjSP6-bijVJ5nIpyxujO9c4LGrsA";
+		token = "Bearer BQDJsUkvg89siQQ5-eOusueCd33vfsmFBn1yHUqyhVXPBJdWj3-I1C5IF9WdZDC5AAN6U5x8fRG1KB003lbsr6pq1hxSURTki9jAqeobWt10ylWyW7Sv8xUop09ceJ3LdJ4-ngROaS3O96jUGKX1siJP4xpfu51AVgyElujcaSi6-5Vudlm2Y2sRCyQvrEbELAfpLbVFAeAgUqhoutUqRmhoPNF52qwCtzg9PAWEgaj--QE5ipQUYFGyfnoJZqgejC3XRjFSRft9Ls9yq5siKq0NH2txV4THKqVVIMtJJ2ouYBr4rinyZwZfIosw2jPwfe_8zE-MNA";
 	}
 //	----------------Users profile starts----------------------------------------
 	@Test (priority = 0)
@@ -117,10 +117,20 @@ public class SpotifyApi {
 		response.prettyPrint();
 		response.then().assertThat().statusCode(200);
 	}
+	@Test (priority = 7)
+	public void GetPlaylistItems() {
+		Response response = RestAssured.given().contentType(ContentType.JSON)
+				.accept(ContentType.JSON)
+				.header("Authorization",token)
+				.when()
+				.get("https://api.spotify.com/v1/playlists/"+playlistId+"/tracks");
+		response.prettyPrint();
+		response.then().assertThat().statusCode(200);
+	}
 	
 
 	
-	@Test (priority = 7)
+	@Test (priority = 8)
 	public void GetCurrentUsersPlaylists() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -131,7 +141,7 @@ public class SpotifyApi {
 		response.then().assertThat().statusCode(200);
 	}
 	
-	@Test (priority = 8)
+	@Test (priority = 9)
 	public void GetPlaylistCoverImage() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -144,7 +154,7 @@ public class SpotifyApi {
 	
 	
 	
-	@Test (priority = 9)
+	@Test (priority = 10)
 	public void UpdatePlaylistItems() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -161,7 +171,7 @@ public class SpotifyApi {
 	}
 	
 	
-	@Test (priority = 10)
+	@Test (priority = 11)
 	public void RemovePlaylistItems() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -177,7 +187,7 @@ public class SpotifyApi {
 //	------------------------playlists ends-----------------------------
 	
 //	------------------------search starts------------------------------
-	@Test (priority = 11)
+	@Test (priority = 12)
 	public void SearchforItem() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -193,7 +203,7 @@ public class SpotifyApi {
 	
 //	------------------------Tracks starts------------------------------
 	
-	@Test (priority = 12)
+	@Test (priority = 13)
 	public void GetTracksAudioAnalysis() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -204,7 +214,7 @@ public class SpotifyApi {
 		response.then().assertThat().statusCode(200);
 	}
 	
-	@Test (priority = 13)
+	@Test (priority = 14)
 	public void GetTracksAudioFeatures() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -214,7 +224,7 @@ public class SpotifyApi {
 		response.prettyPrint();
 		response.then().assertThat().statusCode(200);
 	}
-	@Test (priority = 14)
+	@Test (priority = 15)
 	public void GetTracksAudioFeaturesWithId() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -225,7 +235,7 @@ public class SpotifyApi {
 		response.then().assertThat().statusCode(200);
 	}
 	
-	@Test (priority = 15)
+	@Test (priority = 16)
 	public void GetTrack() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)
@@ -236,7 +246,7 @@ public class SpotifyApi {
 		response.then().assertThat().statusCode(200);
 	}
 	
-	@Test (priority = 16)
+	@Test (priority = 17)
 	public void GetSeveralTracks() {
 		Response response = RestAssured.given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON)

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="16" total="17" passed="1" failed="0" skipped="0">
+<testng-results ignored="17" total="18" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-01T11:14:48Z" name="Default suite" finished-at="2022-07-01T11:14:49Z" duration-ms="1349">
+  <suite started-at="2022-07-01T12:03:22Z" name="Default suite" finished-at="2022-07-01T12:03:23Z" duration-ms="1495">
     <groups>
     </groups>
-    <test started-at="2022-07-01T11:14:48Z" name="Default test" finished-at="2022-07-01T11:14:49Z" duration-ms="1349">
+    <test started-at="2022-07-01T12:03:22Z" name="Default test" finished-at="2022-07-01T12:03:23Z" duration-ms="1495">
       <class name="com.company.spotify.SpotifyApi">
-        <test-method is-config="true" signature="getToken()[pri:0, instance:com.company.spotify.SpotifyApi@117159c0]" started-at="2022-07-01T11:14:48Z" name="getToken" finished-at="2022-07-01T11:14:48Z" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="getToken()[pri:0, instance:com.company.spotify.SpotifyApi@54422e18]" started-at="2022-07-01T12:03:22Z" name="getToken" finished-at="2022-07-01T12:03:22Z" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getToken -->
-        <test-method signature="GetTracksAudioFeaturesWithId()[pri:14, instance:com.company.spotify.SpotifyApi@117159c0]" started-at="2022-07-01T11:14:48Z" name="GetTracksAudioFeaturesWithId" finished-at="2022-07-01T11:14:49Z" duration-ms="1328" status="PASS">
+        <test-method signature="GetPlaylistItems()[pri:6, instance:com.company.spotify.SpotifyApi@54422e18]" started-at="2022-07-01T12:03:22Z" name="GetPlaylistItems" finished-at="2022-07-01T12:03:23Z" duration-ms="1475" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GetTracksAudioFeaturesWithId -->
+        </test-method> <!-- GetPlaylistItems -->
       </class> <!-- com.company.spotify.SpotifyApi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
